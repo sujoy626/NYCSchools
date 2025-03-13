@@ -9,12 +9,12 @@ import Combine
 import Foundation
 
 class SchoolDetailsViewModel : BaseViewModel {
-    private var cancellables = Set<AnyCancellable>()
+    // MARK: - Properties
+    // this property injected from SchoolListView
     let school: SchoolListModel
     
     @Published private(set) var schoolDetails: SchoolDetailModel?
-    
-    private let service : SchoolDetailServiceProtocol
+    private let service : SchoolDetailServiceProtocol // service for fetching school details
     
     init(school: SchoolListModel,
         service: SchoolDetailServiceProtocol = SchoolDetailService()) {
@@ -22,11 +22,13 @@ class SchoolDetailsViewModel : BaseViewModel {
         self.service = service
     }
     
-    
+}
+// MARK: - API implementation or fetching data
+extension SchoolDetailsViewModel{
     func fetchDetails() {
         self.loadingState = .loading("Fetching school details")
         service.fetchSchoolDetail()
-            .receive(on: DispatchQueue.main)
+            .receive(on: DispatchQueue.main) // receive on main thread for UI updates
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -40,5 +42,4 @@ class SchoolDetailsViewModel : BaseViewModel {
             }
             .store(in: &cancellables)
     }
-    
 }

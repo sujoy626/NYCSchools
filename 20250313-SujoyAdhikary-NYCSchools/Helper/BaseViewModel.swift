@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum LoadingState {
     case initState
@@ -17,11 +18,8 @@ enum LoadingState {
 
 
 class BaseViewModel : ObservableObject {
+     var cancellables = Set<AnyCancellable>()
     
     @Published var loadingState : LoadingState = .initState
-    
-    
    
-    
-    
 }

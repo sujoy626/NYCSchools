@@ -10,10 +10,10 @@ import Combine
 
 
 class SchoolListViewModel : BaseViewModel {
+    // MARK: - Properties
+    //stores the list of schools from the API
     @Published var schools: [SchoolListModel] = []
-    
-    private var cancellables = Set<AnyCancellable>()
-    
+    //service for fetching school list
     private let service : SchoolListServiceProtocol
     
     init(
@@ -23,11 +23,17 @@ class SchoolListViewModel : BaseViewModel {
     }
     
     
+    
+    
+}
+
+// MARK: - API implementation or fetching data
+extension SchoolListViewModel{
     func fetchData(){
         loadingState = .loading("Fetching Schools...")
         service.fetchSchoolList()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
+            .receive(on: DispatchQueue.main)// receive on main thread for UI updates
+            .sink { [weak self] completion in //subscriber implementation
                 switch completion {
                 case .finished:
                     break
@@ -40,6 +46,4 @@ class SchoolListViewModel : BaseViewModel {
             }
             .store(in: &cancellables)
     }
-
 }
-

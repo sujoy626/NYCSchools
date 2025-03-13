@@ -13,8 +13,6 @@ import SwiftUI
 struct SchoolListView: View {
     @StateObject var viewModel = SchoolListViewModel()
     
-    
-    
     var body: some View {
         NavigationStack{
             CustomLoadingView(loadingState: viewModel.loadingState){
