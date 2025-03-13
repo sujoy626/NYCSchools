@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8AF8347E2D837425006E7FCB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8347D2D837425006E7FCB /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8A2A70C82D82FEC8004B3A46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		8A2A70B72D82FEC5004B3A46 /* 20250313-SujoyAdhikary-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20250313-SujoyAdhikary-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A2A70C72D82FEC8004B3A46 /* 20250313-SujoyAdhikary-NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20250313-SujoyAdhikary-NYCSchoolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A2A70D12D82FEC8004B3A46 /* 20250313-SujoyAdhikary-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20250313-SujoyAdhikary-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF8347D2D837425006E7FCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		8A2A70AE2D82FEC5004B3A46 = {
 			isa = PBXGroup;
 			children = (
+				8AF8347D2D837425006E7FCB /* README.md */,
 				8A2A70B92D82FEC5004B3A46 /* 20250313-SujoyAdhikary-NYCSchools */,
 				8A2A70CA2D82FEC8004B3A46 /* 20250313-SujoyAdhikary-NYCSchoolsTests */,
 				8A2A70D42D82FEC8004B3A46 /* 20250313-SujoyAdhikary-NYCSchoolsUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF8347E2D837425006E7FCB /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
