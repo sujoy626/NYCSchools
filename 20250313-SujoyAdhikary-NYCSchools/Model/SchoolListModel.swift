@@ -215,6 +215,6 @@ extension SchoolListModel {
     }
     
     static func getDummySchool() -> SchoolListModel {
-        return .init(dbn: "123456789", school_name: "Test School 1")
+        return .init(dbn: "01M450", school_name: "EAST SIDE COMMUNITY SCHOOL")
     }
 }
