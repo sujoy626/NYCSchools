@@ -7,6 +7,7 @@
 
 import Testing
 @testable import _0250313_SujoyAdhikary_NYCSchools
+import Foundation
 
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -20,6 +21,7 @@ struct _0250313_SujoyAdhikary_NYCSchoolsTests {
     
     init() {
         sut = SchoolListViewModel.init(service: SchoolListMockService())
+        
         sutSchoolDetails = SchoolDetailsViewModel.init(
             school: SchoolListModel.getDummySchool(),
             service: SchoolScoreMockService()
@@ -28,25 +30,27 @@ struct _0250313_SujoyAdhikary_NYCSchoolsTests {
     
     
     @Test func schoolListViewModelTest() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
-        
+        //given
         #expect(sut.schools.isEmpty)
-        
+        //when
         sut.fetchData()
-        
-        #expect(sut.schools.count == 100)
+        //then
+        DispatchQueue.main.async {
+            #expect(sut.schools.count == 100)
+        }
     }
     
     @Test func schoolDetailsViewModelTest() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
-        
+        //given
         #expect(sutSchoolDetails.schoolDetails == nil)
-        
+        //when
         sutSchoolDetails.fetchDetails()
-        
-        #expect(sutSchoolDetails.schoolDetails != nil)
+        //then
+        DispatchQueue.main.async {
+            #expect(sutSchoolDetails.schoolDetails != nil)
+        }
     }
-
+    
 }
 
 

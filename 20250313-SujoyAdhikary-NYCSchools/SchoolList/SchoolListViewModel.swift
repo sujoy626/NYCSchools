@@ -12,7 +12,7 @@ import Combine
 class SchoolListViewModel : BaseViewModel {
     // MARK: - Properties
     //stores the list of schools from the API
-    @Published var schools: [SchoolListModel] = []
+    @Published private(set) var schools: [SchoolListModel] = []
     //service for fetching school list
     private let service : SchoolListServiceProtocol
     
