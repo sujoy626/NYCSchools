@@ -30,7 +30,7 @@ struct SchoolListView: View {
                     SchoolDetailsView(viewModel: .init(school: school))
                 }
             }
-
+            .navigationTitle("NYC Schools")
         }
         .onAppear {
             viewModel.fetchData()

@@ -34,6 +34,16 @@
 		8AF8347D2D837425006E7FCB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8AD5AE502D8408020070C0A1 /* Exceptions for "20250313-SujoyAdhikary-NYCSchoolsTests" folder in "20250313-SujoyAdhikary-NYCSchools" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SchoolScore.json,
+			);
+			target = 8A2A70B62D82FEC5004B3A46 /* 20250313-SujoyAdhikary-NYCSchools */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8A2A70B92D82FEC5004B3A46 /* 20250313-SujoyAdhikary-NYCSchools */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -42,6 +52,9 @@
 		};
 		8A2A70CA2D82FEC8004B3A46 /* 20250313-SujoyAdhikary-NYCSchoolsTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8AD5AE502D8408020070C0A1 /* Exceptions for "20250313-SujoyAdhikary-NYCSchoolsTests" folder in "20250313-SujoyAdhikary-NYCSchools" target */,
+			);
 			path = "20250313-SujoyAdhikary-NYCSchoolsTests";
 			sourceTree = "<group>";
 		};
