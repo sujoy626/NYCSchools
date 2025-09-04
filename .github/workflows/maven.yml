@@ -1,0 +1,24 @@
+name: iOS CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: macos-latest # Use a macOS runner
+
+    steps:
+      - uses: actions/checkout@v4 # Checkout the repository code
+
+      - name: Build and Test
+        run: |
+          # Build and test using the Xcode project
+          xcodebuild clean build test \
+            -project GitActionCheck.xcodeproj \
+            -scheme GitActionCheck \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.6'
