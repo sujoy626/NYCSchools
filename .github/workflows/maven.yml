@@ -19,6 +19,6 @@ jobs:
         run: |
           # Build and test using the Xcode project
           xcodebuild clean build test \
-            -project GitActionCheck.xcodeproj \
-            -scheme GitActionCheck \
+            -project 20250313-SujoyAdhikary-NYCSchools.xcodeproj \
+            -scheme 20250313-SujoyAdhikary-NYCSchools \
             -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.6'
